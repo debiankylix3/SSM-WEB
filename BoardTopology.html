@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Mightycore 1284P Board Topology</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="title-header">
+        <h1>Arduino Mightycore 1284P Plug & Play</h1>
+    </header>
+    <div class="board-container">
+        <!-- Image on the left -->
+    
+        <!-- Description paragraph on the right -->
+        <div class="board-description">
+            <nav>
+            <a href="FRONT.html">Main Page</a>
+            <a href="BoardTopology.html" class="active">Board Topology</a>
+            </nav>
+            <h2>Function Overview</h2>
+            <p>The board offers high connectivity thanks to the numerous number of installed ports; it has I2C, Serial (UART), SPI, Wiegand, 3.5mm Jack, Ethernet, and the special ports used to access PORT A, PORT B, PORT C and PORT D of the microprocessor (for more detail check the pinout diagram). The high connectivity makes the board suitable for almost every entry-level and education scenario.</p>
+
+            <p>The well-designed microstrip on the board that connects external modules to the board makes your professional embedded system’s wiring hassle-free. Powered by the powerful ATMega 1284p chip, this board can overcome almost every challenge in your embedded system projects. The board’s high robustness means it can withstand the outdoor operating scenario (while put in a case).</p>
+        </div>
+
+        <div class="board-image">
+            <img src="TopologyBoard.jpeg" alt="Arduino Mightycore 1284P" class="topology-image">
+        </div>
+    </div>
+
+    <div class ="Intro-paragraph">
+        <p>The following figure and the table below describe the key components, interfaces and controls of the Arduino MightyCore 1284P Plug & Play board.</p>
+    </div>
+    <!-- Key components table below the image and paragraph -->
+    <table class="key-components-table">
+        <tr>
+            <th>No.</th>
+            <th>Key Component</th>
+            <th>Description</th>
+        </tr>
+        <!-- Add your table content here -->
+        <tr>
+            <td>1.</td>
+            <td>ATmega 1284P</td>
+            <td>Microcontroller with AVR as its core. For more information, see <a href="https://ww1.microchip.com/downloads/en/DeviceDoc/doc8059.pdf" target="_blank">ATMega 1284P Datasheet</a></td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Buzzer</td>
+            <td>Generate a pure frequency tone based on the signal it received</td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>DS3231SN</td>
+            <td>RTC IC with I2C interface and commonly employed for precise timekeeping applications</td>
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>ENC28J60</td>
+            <td>Ethernet controller chip operating at 10 Mbps through SPI</td>
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>Jack 3.5mm port</td>
+            <td>Connect the board with audio devices (active speaker, headphone)</td>
+        </tr>
+        <tr>
+            <td>6.</td>
+            <td>FTDI port</td>
+            <td>To connect with  FTDI modules for debugging purposes which uses usb interface</td>
+        </tr>
+        <tr>
+            <td>7.</td>
+            <td>Serial port</td>
+            <td>Connect with various devices that support serial interface</td>
+        </tr>
+        <tr>
+            <td>8.</td>
+            <td>Power port 5V</td>
+            <td>External power if the board is not connected to device</td>
+        </tr>
+        <tr>
+            <td>9.</td>
+            <td>I2C port</td>
+            <td>To connect with various devices that support I2C interface</td>
+        </tr>
+        <tr>
+            <td>10.</td>
+            <td>SD Card reader</td>
+            <td>A device to read and write data to SD or memory card.</td>
+        </tr>
+        <tr>
+            <td>11.</td>
+            <td>Ethernet port</td>
+            <td>A port that allows the board to communicate through the plugged ethernet cable.</td>
+        </tr>
+        <tr>
+            <td>12.</td>
+            <td>Relay Port</td>
+            <td>Special port to connect relay with the board</td>
+        </tr>
+        <tr>
+            <td>13.</td>
+            <td>Keypad Port</td>
+            <td>A port that allows the connection of the keypad, a keypad can be programmed to give inputs</td>
+        </tr>
+        <tr>
+            <td>14.</td>
+            <td>Wiegand Port</td>
+            <td>A port that allows the board to connect to a device that use wiegand protocol (i.e. patrol guard’s RFID scanner)</td>
+        </tr>
+        <tr>
+            <td>15.</td>
+            <td>DF Player Port</td>
+            <td>A port that allows the connection of a DF Player. DF Player is an external module used to read / write data from a microSD card</td>
+        </tr>
+        <tr>
+            <td>16.</td>
+            <td>Button Port</td>
+            <td>A port that allows buttons to be connected to the board. Buttons can be programmed and used for numerous purpose (i.e. turn on / off LED)</td>
+        </tr>
+        <tr>
+            <td>17.</td>
+            <td>TCP/IP Port</td>
+            <td>A TCP/IP port on a board is a designated endpoint for communication within a network using the TCP/IP protocol</td>
+        </tr>
+        <tr>
+            <td>18.</td>
+            <td>SPI port</td>
+            <td>Connect device with SPI interface such as ethernet</td>
+        </tr>
+        <tr>
+            <td>19.</td>
+            <td>LED port</td>
+            <td>Connect a LED to the board</td>
+        </tr>
+
+        <!-- Add more rows as needed -->
+    </table>
+
+    <footer>
+        <p>&copy;  Copyright 2023. All Rights by TKS DISPLAY.</p>
+    </footer>
+</body>
+</html>
