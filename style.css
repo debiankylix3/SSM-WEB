@@ -10,6 +10,10 @@
 
     }
 }
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f5f5f5;
@@ -18,45 +22,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden; /* This will hide the horizontal scrollbar */
+    /*overflow-x: hidden; /* This will hide the horizontal scrollbar */
     animation: transitionIn 0.75s;
-}
-
-
-.title-header {
-    background: linear-gradient(45deg, #6f42c1, #4a1163); /* Gradient background */
-    color: #fff; /* Text color */
-    padding: 30px;
-    text-align: center;
-    width: 100%;
-}
-
-.board-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 91%;
-    max-width: 100%;
-}
-
-.board-image {
-    flex: 1;
-}
-
-.board-description {
-    flex: 2;
-    width: 91%;
-    margin-top: 1cm;
-}
-
-.board-description h2 {
-    margin-top: 1cm;
-    color: #333;
-}
-
-.Intro-paragraph {
-    margin-top: 2cm;
-    width: 90%;
 }
 
 section {
@@ -66,17 +33,62 @@ section {
     align-items: flex-start;
 }
 
+h2 {
+    color: #333;
+}
+
+img {
+    margin-top: 3cm;
+    max-width: 23%;
+    height: auto;
+    border: 5px solid #6f42c1; /* Border style, width, and color */
+    border-radius: 16px; /* Optional: Adds rounded corners to the border */
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+img:hover {
+    transform: scale(1.2);
+}
+
+.title-header {
+    background: linear-gradient(45deg, #6f42c1, #4a1163); /* Gradient background */
+    color: #fff; /* Text color */
+    padding: 30px;
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
+}
+
 .description-section {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
 }
 
 .description {
     flex: 1;
-    text-align: justify;
+    width: 100%;
     margin-right: 5cm;
     margin-top: 1cm;
+}
+
+.description a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 10px;
+}
+nav a:hover {
+    background-color: #6f42c1; /* Change this color to your desired highlight color */
+    color: #fff; /* Change this color to your desired text color */
+}
+
+.description a.active{
+    background-color: #6f42c1;
+    border-radius: 5px;
+    padding: 5px 10px;
 }
 
 .description::after {
@@ -86,49 +98,6 @@ section {
     width: 100%; /* Make the line span the entire width of the container */
     background: linear-gradient(45deg, #6f42c1, #4a1163); /* Gradient background */
     margin-top: 10px; /* Adjust the margin to separate the line from the content */
-}
-
-
-h2 {
-    color: #333;
-}
-
-img {
-    margin-top: 20px;
-    max-width: 20%;
-    height: auto;
-    border: 5px solid #6f42c1; /* Border style, width, and color */
-    border-radius: 16px; /* Optional: Adds rounded corners to the border */
-    padding: 10px;
-}
-
-/* Styles for the topology image */
-.topology-image {
-    max-width: 100%;
-    width: 100%;
-    display: block; /* Make the image a block element to center it */
-    border: 2px solid #6f42c1; /* Example border color */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Example box shadow */
-}
-
-/* Add styles for the key components table */
-.key-components-table {
-    width: 90%;
-    border-collapse: collapse;
-    margin-top: 5px;
-    margin-bottom: 2cm;
-}
-
-.key-components-table th, .key-components-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-.key-components-table th {
-    background-color: #333;
-    color: #fff;
 }
 
 .features-section {
@@ -160,21 +129,13 @@ th {
     color: #fff;
 }
 
-footer {
-    background: linear-gradient(45deg, #6f42c1, #4a1163); /* Gradient background */
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    margin-top: auto;
-    width: 100%;
-}
-
 ul {
     margin-right: 80px;
 }
 
 .tutorials-section {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: flex-start;
     margin-top: 20px; /* Add margin to separate it from the previous section */
@@ -183,12 +144,13 @@ ul {
 
 .categories {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
 }
 
 .category {
-    flex: 0 0 30%; /* Adjust the width of each category as needed */
+    flex: 0 0 100%; /* Adjust the width of each category as needed */
     margin-right: 10px; /* Add margin between categories */
 }
 
@@ -206,11 +168,64 @@ ul {
     margin-bottom: 10px;
 }
 
-.description a {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    margin-right: 10px;
+
+.board-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 91%;
+    max-width: 100%;
+}
+
+.board-image {
+    flex: 1;
+}
+
+.board-description {
+    flex: 2;
+    width: 91%;
+    margin-top: 1cm;
+}
+
+.board-description h2 {
+    margin-top: 1cm;
+    color: #333;
+}
+
+.Intro-paragraph {
+    margin-top: 2cm;
+    width: 90%;
+}
+
+/* Styles for the topology image */
+.topology-image {
+    margin-top: 3cm;
+    max-width: 100%;
+    width: 100%;
+    display: block; /* Make the image a block element to center it */
+    border: 2px solid #6f42c1; /* Example border color */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Example box shadow */
+}
+
+/* Add styles for the key components table */
+.key-components-table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 5px;
+    margin-bottom: 2cm;
+}
+
+.key-components-table th, .key-components-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.key-components-table th {
+    background-color: #333;
+    color: #fff;
 }
 
 .board-description a {
@@ -219,18 +234,45 @@ ul {
     font-size: 16px;
     margin-right: 10px;
 }
+
 .board-description a.active{
     background-color: #6f42c1;
     border-radius: 5px;
     padding: 5px 10px;
 }
 
-.description a.active{
-    background-color: #6f42c1;
-    border-radius: 5px;
-    padding: 5px 10px;
+footer {
+    background: linear-gradient(45deg, #6f42c1, #4a1163); /* Gradient background */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+    max-width: 100%;
 }
 
 
+@media (max-width: 768px) {
+    .title-header {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .description-section {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .board-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+    .center {
+        display: block;
+        margin-top: 1cm;
+        margin-left: 2.25cm;
+        margin-right: auto;
+        max-width: 100%;
+        width: 60%;
+    }
 
 
+    /* Add more responsive styles within the media query if needed */
+}
