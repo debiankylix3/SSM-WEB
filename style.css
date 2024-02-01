@@ -37,9 +37,13 @@ h2 {
     color: #333;
 }
 
+.description h2{
+    margin-top: 1cm;
+}
+
 img {
     margin-top: 3cm;
-    max-width: 23%;
+    max-width: 23%; 
     height: auto;
     border: 5px solid #6f42c1; /* Border style, width, and color */
     border-radius: 16px; /* Optional: Adds rounded corners to the border */
@@ -49,6 +53,7 @@ img {
 
 img:hover {
     transform: scale(1.2);
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
 }
 
 .title-header {
@@ -65,6 +70,7 @@ img:hover {
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .description {
@@ -75,15 +81,24 @@ img:hover {
 }
 
 .description a {
+    margin-top: 1cm;
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
     margin-right: 10px;
 }
-nav a:hover {
-    background-color: #6f42c1; /* Change this color to your desired highlight color */
-    color: #fff; /* Change this color to your desired text color */
+
+nav a:hover,
+    .board-description a:hover {
+        background-color: #6f42c1;
+        color: #fff;
+        transition: background-color 0.3s, color 0.3s;
 }
+
+nav a {
+    transition: background-color 0.3s, color 0.3s;
+}
+
 
 .description a.active{
     background-color: #6f42c1;
@@ -119,9 +134,8 @@ table {
 
 th, td {
     border: 1px solid #ddd;
-    padding: 3px;
+    padding: 8px;
     text-align: left;
-    margin-right: 10px;
 }
 
 th {
@@ -140,6 +154,23 @@ ul {
     align-items: flex-start;
     margin-top: 20px; /* Add margin to separate it from the previous section */
     margin-bottom: 20px;
+}
+
+.tutorials-section ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 10px;
+    color: #333; /* Set the default link color */
+    border-bottom: 2px solid #6f42c1; /* Add a colored bottom border */
+    padding-bottom: 2px; /* Add some padding for a subtle underline effect */
+    transition: color 0.3s; /* Add a smooth transition effect for color changes */
+}
+
+.tutorials-section ul li a:hover {
+    color: #6f42c1; /* Change the color on hover */
+    border-bottom: 2px solid transparent; /* Remove the bottom border on hover */
+    transition: color 0.3s, border-bottom 0.3s; /* Add smooth transitions */
 }
 
 .categories {
@@ -246,11 +277,87 @@ footer {
     color: #fff;
     padding: 10px;
     text-align: center;
-    margin-top: auto;
+    margin-top: 20px;
     width: 100%;
     max-width: 100%;
 }
 
+get-section {
+    width: 91%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.get-description h2{
+    margin-top: 1cm;
+}
+
+.get-description {
+    flex: 1;
+    width: 91%;
+    margin-top: 1cm;
+}
+
+.get-description a {
+    margin-top: 1cm;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.player{
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 16/9;
+    margin-top: 1cm;
+}
+
+.get-description a.active{
+    background-color: #6f42c1;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.get-description ol {
+    padding: 0;
+    margin: 10px 0;
+}
+
+.get-description ol li {
+    margin-bottom: 10px;
+}
+
+.get-description pre {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.show-more-link {
+    cursor: pointer;
+    color: #007bff; /* Adjust the color as needed */
+    text-decoration: underline;
+}
+
+.default-image {
+    margin-top: 10px;
+    max-width: 100%;
+    width: 80%;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    transition: none;
+}
+
+.default-image:hover {
+    transform: none;
+    transition: none; /* Add a smooth transition effect */
+}
 
 @media (max-width: 768px) {
     .title-header {
@@ -264,6 +371,10 @@ footer {
     .board-container {
         flex-direction: column; /* Stack items vertically on smaller screens */
     }
+
+    .get-section {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
     .center {
         display: block;
         margin-top: 1cm;
@@ -273,6 +384,42 @@ footer {
         width: 60%;
     }
 
+    .get-description a {
+        margin-top: 1cm;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        margin-right: 10px;
+    }
 
+    .description a {
+        margin-top: 1cm;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    .board-description a {
+        margin-top: 1cm;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .get-description {
+        margin-right: 0; /* Adjust margin for smaller screens */
+    }
+
+    .get-description pre {
+        white-space: normal;
+        overflow: visible;
+        text-overflow: unset;
+    }
+
+    .show-more-link {
+        display: block;
+        margin-top: 10px;
+    }
     /* Add more responsive styles within the media query if needed */
 }
