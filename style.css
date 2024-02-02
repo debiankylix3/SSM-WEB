@@ -43,7 +43,7 @@ h2 {
 
 img {
     margin-top: 3cm;
-    max-width: 23%; 
+    max-width: 25%; 
     height: auto;
     border: 5px solid #6f42c1; /* Border style, width, and color */
     border-radius: 16px; /* Optional: Adds rounded corners to the border */
@@ -102,6 +102,7 @@ nav a {
 
 .description a.active{
     background-color: #6f42c1;
+    color: #fff;
     border-radius: 5px;
     padding: 5px 10px;
 }
@@ -122,13 +123,13 @@ nav a {
 }
 
 .features-table {
-    width: 100%;
+    max-width: 100%;
     margin-top: 10px;
     margin-bottom: 20px;
 }
 
 table {
-    width: 100%;
+    max-width: 100%;
     border-collapse: collapse;
 }
 
@@ -217,6 +218,7 @@ ul {
     flex: 2;
     width: 91%;
     margin-top: 1cm;
+    margin-right: 100px;
 }
 
 .board-description h2 {
@@ -268,6 +270,7 @@ ul {
 
 .board-description a.active{
     background-color: #6f42c1;
+    color: #fff;
     border-radius: 5px;
     padding: 5px 10px;
 }
@@ -309,19 +312,20 @@ get-section {
 
 .player{
     max-width: 100%;
-    width: 100%;
+    width: 90%;
     aspect-ratio: 16/9;
     margin-top: 1cm;
+    margin-left: 1cm;
 }
 
 .get-description a.active{
     background-color: #6f42c1;
+    color: #fff;
     border-radius: 5px;
     padding: 5px 10px;
 }
 
 .get-description ol {
-    padding: 0;
     margin: 10px 0;
 }
 
@@ -388,7 +392,7 @@ get-section {
         margin-top: 1cm;
         text-decoration: none;
         font-weight: bold;
-        font-size: 14px;
+        font-size: 12px;
         margin-right: 10px;
     }
 
@@ -396,7 +400,7 @@ get-section {
         margin-top: 1cm;
         text-decoration: none;
         font-weight: bold;
-        font-size: 14px;
+        font-size: 12px;
         margin-right: 10px;
     }
 
@@ -404,7 +408,7 @@ get-section {
         margin-top: 1cm;
         text-decoration: none;
         font-weight: bold;
-        font-size: 14px;
+        font-size: 12px;
         margin-right: 10px;
     }
     .get-description {
@@ -421,5 +425,23 @@ get-section {
         display: block;
         margin-top: 10px;
     }
+    table {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+
+    th, td {
+        padding: 6px; /* Adjust padding for smaller screens */
+    }
+
+    .features-table, .key-components-table {
+        overflow-x: auto; /* Enable horizontal scrolling on small screens */
+    }
     /* Add more responsive styles within the media query if needed */
+    .player{
+        max-width: 100%;
+        width: 90%;
+        aspect-ratio: 16/9;
+        margin-top: 1cm;
+        margin-left: 10px;
+    }
 }
